@@ -12,7 +12,7 @@ export function Welcome() {
           <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
             <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
               Welcome to my website. Currently under construction. Please check
-              back on 7th May, 2025.
+              back on 7th May, 2025
             </p>
             {/* <ul>
               {resources.map(({ href, text, icon }) => (
