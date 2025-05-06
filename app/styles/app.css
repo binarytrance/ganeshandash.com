@@ -4,15 +4,52 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-gold: #efbf04;
-  --color-black: #000000;
+  --color-black: #060606;
   --color-emerald: #0a3c30;
+  --z-index-3: 3;
+  --z-index-2: 2;
+  --z-index-1: 1;
+  --z-index-0: 0;
+  --z-index--1: -1;
 }
 
 html,
 body {
-  @apply bg-black text-white;
+  @apply bg-emerald text-white;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+}
+
+.text-stroke {
+  /* color: black; */
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.4px;
+  /* -webkit-text-stroke-color: var(--color-gold); */
+}
+
+.strap-emerald {
+  position: relative;
+  display: inline-block;
+  /* border: solid 1px var(--color-emerald); */
+  z-index: 1;
+  &:before {
+    content: "";
+    background: var(--color-gold);
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    border-radius: 0.3rem;
+    left: 70%;
+    top: 52%;
+    z-index: -1;
+    transform: translate(-20%, -50%) skew(-45deg) rotate(-50deg);
+    transition: all 0.3s ease;
+    opacity: 1;
+  }
+}
+
+.react-icons {
+  width: 30px;
 }

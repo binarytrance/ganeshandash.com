@@ -3,8 +3,29 @@ import { Section } from "~/components/Section";
 export function LandingPage() {
   return (
     <main className="flex flex-col items-center ">
-      <Section>
-        <h1 className="p-4 text-gold font-serif text-6xl">Ganeshan Dash</h1>
+      <Section className="flex flex-row gap-10 align-center border-solid border-gold">
+        <div className="flex justify-center align-center min-w-[200px] h-[200px] border-3 border-gold rounded-full border-dotted">
+          <img
+            src="/images/self-potrait.png"
+            alt="Ganeshan Dash"
+            className="rounded-full w-48 h-48 object-cover"
+          />
+        </div>
+        <div>
+          <h1 className="mb-6 text-gold font-serif text-6xl">
+            Ganeshan{" "}
+            <span className="text-white text-stroke strap-emerald">Dash</span>
+          </h1>
+          <p>
+            {/* insert lorem ipsum */}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur
+          </p>
+        </div>
       </Section>
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
         <header className="flex flex-col items-center gap-9"></header>
