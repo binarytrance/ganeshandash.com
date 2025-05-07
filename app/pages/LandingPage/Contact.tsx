@@ -15,7 +15,11 @@ const Contact = () => {
           <p>ganeshan.dash@gmail.com</p>
         </div>
         <div>
-          <form className="border-4 border-dark bg-gold py-8 px-12 rounded-lg shadow-md ">
+          <form
+            className="border-4 border-dark bg-gold py-8 px-12 rounded-lg shadow-md"
+            // @ts-ignore
+            netlify
+          >
             <div className="mb-4">
               <label htmlFor="name" className="block text-dark font-bold">
                 Name
