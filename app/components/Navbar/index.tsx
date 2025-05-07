@@ -30,10 +30,14 @@ function Navbar() {
           >
             <BiLogoGithub />
           </a>
-          <a href="#linkedin">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/ganeshandash/"
+          >
             <BiLogoLinkedinSquare />
           </a>
-          <a href="#mail">
+          <a href="mailto:ganeshan.dash@gmail.com">
             <BiMailSend />
           </a>
           <a

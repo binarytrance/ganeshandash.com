@@ -20,3 +20,4 @@
 [ ] Newsletter [p3] [feature]
 [ ] Calendly button [p1] [feature]
 [ ] Link components [p1] [enhancement]
+[ ] social media/contact icons in contact section [p1] [feature]
