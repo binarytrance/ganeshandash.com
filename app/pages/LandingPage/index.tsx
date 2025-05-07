@@ -7,6 +7,9 @@ import { Skills } from "./Skills";
 export function LandingPage() {
   return (
     <main className="flex flex-col items-center ">
+      <p className="absolute top-0 bg-pink w-full text-center text-dark">
+        Best viewed on desktop for now. Mobile experience is coming soon!
+      </p>
       <About />
       <Skills />
       <Projects />
