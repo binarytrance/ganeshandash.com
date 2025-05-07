@@ -6,7 +6,7 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section className={`flex pt-16 pb-4 mx-[20vw] ${className}`}>
+    <section className={`flex py-16 w-full px-[15vw] ${className}`}>
       {children}
     </section>
   );

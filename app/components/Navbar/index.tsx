@@ -7,7 +7,7 @@ import { IconContext } from "react-icons";
 
 function Navbar() {
   return (
-    <nav className="navbar flex justify-between items-center mx-[10vw] py-8">
+    <nav className="navbar flex justify-between items-center mx-[10vw] py-8 ">
       <div className="navbar__site-links gap-4 flex items-center">
         <a href="#home" className="w-[40px] h-[40px]">
           <img src="/images/logo.png" />{" "}
@@ -20,7 +20,7 @@ function Navbar() {
       </div>
       <div className="navbar__contact-links flex gap-4 items-center">
         <IconContext.Provider
-          value={{ color: "#fff", size: "1.5em", className: "social-icons" }}
+          value={{ color: "#e4e4e4", size: "1.5em", className: "social-icons" }}
         >
           <a
             className="w-[20px]"

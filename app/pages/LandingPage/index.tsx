@@ -1,58 +1,13 @@
-import { Section } from "~/components/Section";
+import About from "./About";
+import Projects from "./Projects";
+import { Skills } from "./Skills";
 
 export function LandingPage() {
   return (
     <main className="flex flex-col items-center ">
-      <Section className="flex flex-row gap-10 align-center border-solid border-gold">
-        <div className="flex justify-center align-center min-w-[200px] h-[200px] border-3 border-gold rounded-full border-dotted">
-          <img
-            src="/images/self-potrait.png"
-            alt="Ganeshan Dash"
-            className="rounded-full w-48 h-48 object-cover"
-          />
-        </div>
-        <div>
-          <h1 className="mb-6 text-gold font-serif text-6xl">
-            Ganeshan{" "}
-            <span className="text-white text-stroke strap-emerald">Dash</span>
-          </h1>
-          <p>
-            {/* insert lorem ipsum */}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur
-          </p>
-        </div>
-      </Section>
-      <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
-        <header className="flex flex-col items-center gap-9"></header>
-        <div className="max-w-[300px] w-full space-y-6 px-4">
-          <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
-            <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
-              Welcome to my website. Currently under construction. Please check
-              back on 7th May, 2025
-            </p>
-            {/* <ul>
-              {resources.map(({ href, text, icon }) => (
-                <li key={href}>
-                  <a
-                    className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {icon}
-                    {text}
-                  </a>
-                </li>
-              ))}
-            </ul> */}
-          </nav>
-        </div>
-      </div>
+      <About />
+      <Skills />
+      <Projects />
     </main>
   );
 }
