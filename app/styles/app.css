@@ -34,7 +34,7 @@ body {
   /* -webkit-text-stroke-color: var(--color-gold); */
 }
 
-.strap-emerald {
+.strap-gold {
   position: relative;
   display: inline-block;
   &:before {
@@ -45,7 +45,7 @@ body {
     position: absolute;
     border-radius: 0.3rem;
     left: 70%;
-    top: 52%;
+    top: 55%;
     z-index: var(--z-index--1);
     transform: translate(-20%, -50%) skew(-45deg) rotate(-50deg);
     transition: all 0.3s ease;
@@ -75,7 +75,7 @@ nav a {
   right: 0;
   z-index: 0;
   width: 25%;
-  height: 100vh;
+  height: 100%;
   z-index: var(--z-index--1);
 }
 
@@ -115,4 +115,27 @@ nav a {
       font-size: 4.2em;
     }
   }
+  svg {
+    display: inline;
+    transform: translateY(-10px);
+  }
+}
+.hovered-project-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* 2 columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 1rem;
+  img {
+    border-radius: 0.8rem;
+  }
+}
+
+.primary-project-img {
+  grid-column: 1 / span 2; /* span across both columns */
+  grid-row: 1; /* on the first row */
+}
+.secondary-project-img {
+  grid-column: 2; /* second column */
+  grid-row: 2; /* second row */
+  justify-self: end;
 }

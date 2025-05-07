@@ -1,4 +1,6 @@
 import About from "./About";
+import Contact from "./Contact";
+import LatestBlogs from "./LatestBlogs";
 import Projects from "./Projects";
 import { Skills } from "./Skills";
 
@@ -8,6 +10,8 @@ export function LandingPage() {
       <About />
       <Skills />
       <Projects />
+      <LatestBlogs />
+      <Contact />
     </main>
   );
 }

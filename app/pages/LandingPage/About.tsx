@@ -5,9 +5,9 @@ import { SVG } from "~/SVG";
 const About = ({}) => {
   return (
     <>
-      <SVG name="hexagon" className="hero-pattern" />
-      <Section className="flex flex-col gap-10 align-center border-gold">
-        <div className="flex flex-row items-center gap-6">
+      <SVG name="hexagon" className="hero-pattern h-100" />
+      <Section className="gap-10 align-center border-gold">
+        <div className="flex flex-row items-center gap-12">
           <div className="flex justify-center align-center min-w-[200px] h-[200px] border-3 border-gold rounded-full border-dotted">
             <img
               src="/images/self-potrait.png"
@@ -17,12 +17,10 @@ const About = ({}) => {
           </div>
           <h1 className="mb-6 text-gold font-serif text-6xl">
             Ganeshan{" "}
-            <span className="text-off-white text-stroke strap-emerald">
-              Dash
-            </span>
+            <span className="text-off-white text-stroke strap-gold">Dash</span>
           </h1>
         </div>
-        <div className="flex flex-row gap-6">
+        <div className="flex flex-row gap-12">
           <div className="min-w-[200px] flex gap-6 flex-col text-lg">
             <RecTile>Developer</RecTile>
             <RecTile>Musician</RecTile>
@@ -31,17 +29,28 @@ const About = ({}) => {
             <RecTile>Photographer</RecTile>
             <RecTile>Film Aficianado</RecTile>
           </div>
-          <p className="text-off-white text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in{" "}
-            <a href="#" className="inline-link text-pink-500">
-              voluptate
-            </a>{" "}
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          </p>
+          <div className="flex flex-col justify-center">
+            <p className="text-off-white text-lg mb-4">
+              Hey, there! I build things for the web — with empathy, intention,
+              and a lot of artistic flair. I care about clean code, meaningful
+              interfaces, and experiences that feel as good as they look. I
+              specialise in Javascript and React and CSS.
+            </p>
+            <p className="text-off-white text-lg mb-4">
+              My background’s rooted in frontend engineering, and I love to be
+              constantly learning, creating, tinkering, thinking of how to make
+              things more efficient. When I am not at my desk coding, I am into
+              music, photography, watching movies, writing, and the messy beauty
+              of self-expression. A blog’s coming soon. This site's my little
+              corner to create, explore, and share.
+            </p>
+            {/* <a href="#" className="inline-link text-pink-500">
+            voluptate
+          </a>{" "} */}
+            <p className="text-off-white text-lg">
+              I am Ganeshan, and I could be your new favorite developer.
+            </p>
+          </div>
         </div>
       </Section>
     </>
