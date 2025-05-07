@@ -16,6 +16,7 @@ const Contact = () => {
         </div>
         <div>
           <form
+            name="contact-form"
             className="border-4 border-dark bg-gold py-8 px-12 rounded-lg shadow-md"
             // @ts-ignore
             netlify
