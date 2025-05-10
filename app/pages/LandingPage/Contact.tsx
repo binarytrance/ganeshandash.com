@@ -19,12 +19,22 @@ const Contact = () => {
     console.log("event.currentTarget:", event.currentTarget);
     const myForm = event.currentTarget;
     const formData = new FormData(myForm);
+    console.log("FormData:", Object.fromEntries(formData));
     const form = formRef.current;
     console.log({ form });
     if (!form) {
       console.error("Form reference is null");
       // setStatus("error");
       // setErrorMessage("Form not found. Please try again.");
+      return;
+    }
+
+    // In development, mock the submission to avoid 405 error
+    if (process.env.NODE_ENV === "development") {
+      console.log("Mock Netlify submission:", Object.fromEntries(formData));
+      // setStatus("success");
+      form.reset();
+      alert("Form submitted successfully (mocked in dev)!");
       return;
     }
 
@@ -57,11 +67,12 @@ const Contact = () => {
             name="contact"
             className="border-4 border-dark bg-gold py-8 px-12 rounded-lg shadow-md"
             // @ts-ignore
-            netlify
+            netlify="true"
             onSubmit={handleSubmit}
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             ref={formRef}
+            method="POST"
           >
             <input type="hidden" name="form-name" value="contact" />
 

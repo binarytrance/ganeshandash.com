@@ -22,6 +22,7 @@ const Projects = () => {
             projectLink="https://horizon360.toro.com/"
             role="Senior Software Engineer"
             company={"Springworks"}
+            key="springworks"
             onMouseEnter={() => setHoveredProject("Horizon360")}
           />
           <ProjectListItem
@@ -29,6 +30,7 @@ const Projects = () => {
             projectLink={"https://5percentnutrition.com/"}
             role="Senior UI Developer"
             company={"Shoptrade"}
+            key="shoptrade"
             onMouseEnter={() => setHoveredProject("5%Nutrition")}
           />
           <ProjectListItem
@@ -36,6 +38,7 @@ const Projects = () => {
             role="Senior UI Developer"
             projectLink="https://www.spro.com/"
             company={"Shoptrade"}
+            key="spro"
             onMouseEnter={() => setHoveredProject("SPRO")}
           />
           <ProjectListItem
@@ -43,6 +46,7 @@ const Projects = () => {
             projectLink="https://www.deccanherald.com/"
             role="UI Developer"
             company={"Lollypop"}
+            key="deccan"
             notes={[
               "🏆 Won ",
               <a
@@ -60,6 +64,7 @@ const Projects = () => {
             projectLink="https://www.factspan.com/"
             role="UI Developer"
             company={"Lollypop"}
+            key={"factspan"}
             notes={[
               "🏆 Won ",
               <a
