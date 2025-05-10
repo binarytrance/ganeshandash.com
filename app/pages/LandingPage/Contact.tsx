@@ -16,11 +16,13 @@ const Contact = () => {
         </div>
         <div>
           <form
-            name="contact-form"
+            name="contact"
             className="border-4 border-dark bg-gold py-8 px-12 rounded-lg shadow-md"
             // @ts-ignore
             netlify
           >
+            <input type="hidden" name="form-name" value="contact" />
+
             <div className="mb-4">
               <label htmlFor="name" className="block text-dark font-bold">
                 Name

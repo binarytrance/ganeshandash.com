@@ -34,6 +34,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        {/* @ts-ignore */}
+        <form
+          name="contact"
+          data-netlify
+          data-netlify-honeypot="bot-field"
+          hidden
+        >
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <textarea name="message"></textarea>
+        </form>
         {children}
         <ScrollRestoration />
         <Scripts />
