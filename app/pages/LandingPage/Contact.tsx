@@ -1,6 +1,44 @@
+import { useRef } from "react";
 import { Section } from "~/components/Section";
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  interface FormElements extends HTMLFormControlsCollection {
+    name: HTMLInputElement;
+    email: HTMLInputElement;
+    message: HTMLTextAreaElement;
+  }
+
+  interface ContactForm extends HTMLFormElement {
+    elements: FormElements;
+  }
+
+  const handleSubmit = (event: React.FormEvent<ContactForm>) => {
+    event.preventDefault();
+    console.log("Event:", event);
+    console.log("event.currentTarget:", event.currentTarget);
+    const myForm = event.currentTarget;
+    const formData = new FormData(myForm);
+    const form = formRef.current;
+    console.log({ form });
+    if (!form) {
+      console.error("Form reference is null");
+      // setStatus("error");
+      // setErrorMessage("Form not found. Please try again.");
+      return;
+    }
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => alert("Thank you for your submission"))
+      .catch((error: Error) => alert(error.message));
+  };
+
+  // document.querySelector("form").addEventListener("submit", handleSubmit);
+
   return (
     <>
       <Section className="grid grid-cols-[40%_60%] gap-4">
@@ -20,6 +58,10 @@ const Contact = () => {
             className="border-4 border-dark bg-gold py-8 px-12 rounded-lg shadow-md"
             // @ts-ignore
             netlify
+            onSubmit={handleSubmit}
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            ref={formRef}
           >
             <input type="hidden" name="form-name" value="contact" />
 
