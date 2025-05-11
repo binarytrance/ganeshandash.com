@@ -26,9 +26,11 @@ import { SiFormik } from "react-icons/si";
 type Props = {};
 export const Skills = ({}: Props) => {
   return (
-    <Section>
-      <h2 className="font-serif text-4xl text-gold letter mb-12">Skills</h2>
-      <div className="grid-cols-5  grid gap-4">
+    <Section id="skills">
+      <h2 className="font-serif text-2xl sm:text-4xl text-gold letter mb-6 sm:mb-12">
+        Skills
+      </h2>
+      <div className="grid-cols-3 sm:grid-cols-5  grid gap-4">
         <SkillBox label="HTML" Icon={BiLogoHtml5} />
         <SkillBox label="CSS" Icon={BiLogoCss3} />
         <SkillBox label="SASS" Icon={BiLogoSass} />

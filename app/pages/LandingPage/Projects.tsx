@@ -7,12 +7,12 @@ import { FiExternalLink } from "react-icons/fi";
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState("");
   return (
-    <Section>
-      <h2 className="font-serif text-4xl text-gold letter mb-12">
+    <Section id="projects">
+      <h2 className="font-serif text-2xl sm:text-4xl text-gold letter mb-6 sm:mb-12">
         Featured Projects
       </h2>
-      <div className="grid grid-cols-2 gap-4">
-        <div className="hovered-project-container">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="hovered-project-container hidden sm:grid">
           <HoveredProject hoveredProject={hoveredProject} />
         </div>
         <ol className="project-list-ol w-full">
@@ -24,6 +24,7 @@ const Projects = () => {
             company={"Springworks"}
             key="springworks"
             onMouseEnter={() => setHoveredProject("Horizon360")}
+            hoveredProject={"Horizon360"}
           />
           <ProjectListItem
             projectName={"5% Nutrition"}
@@ -32,6 +33,7 @@ const Projects = () => {
             company={"Shoptrade"}
             key="shoptrade"
             onMouseEnter={() => setHoveredProject("5%Nutrition")}
+            hoveredProject={"5%Nutrition"}
           />
           <ProjectListItem
             projectName={"SPRO Sports Professionals"}
@@ -40,6 +42,7 @@ const Projects = () => {
             company={"Shoptrade"}
             key="spro"
             onMouseEnter={() => setHoveredProject("SPRO")}
+            hoveredProject={"SPRO"}
           />
           <ProjectListItem
             projectName={"Deccan Herald"}
@@ -57,6 +60,7 @@ const Projects = () => {
               </a>,
             ]}
             onMouseEnter={() => setHoveredProject("DH")}
+            hoveredProject={"DH"}
           />
 
           <ProjectListItem
@@ -79,6 +83,7 @@ const Projects = () => {
               " on CSS Design Awards",
             ]}
             onMouseEnter={() => setHoveredProject("Factspan")}
+            hoveredProject={"Factspan"}
           />
         </ol>
       </div>

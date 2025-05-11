@@ -1,5 +1,7 @@
 import { IconContext } from "react-icons";
 import { FiExternalLink } from "react-icons/fi";
+import useViewportSize from "~/customHooks/useViewPortSize";
+import HoveredProject from "~/pages/LandingPage/HoveredProject";
 
 const ProjectListItem = ({
   projectName,
@@ -9,6 +11,7 @@ const ProjectListItem = ({
   technologies,
   onMouseEnter,
   notes,
+  hoveredProject,
 }: {
   projectName: string;
   projectLink?: string;
@@ -17,7 +20,9 @@ const ProjectListItem = ({
   technologies?: Array<string>;
   onMouseEnter: () => void;
   notes?: Array<React.ReactNode>;
+  hoveredProject?: string;
 }) => {
+  const { width } = useViewportSize();
   return (
     <IconContext.Provider value={{ color: "#F26CA7", size: "0.80em" }}>
       <li className="project-list-item" onMouseEnter={onMouseEnter}>
@@ -32,20 +37,14 @@ const ProjectListItem = ({
             <FiExternalLink />
           </a>
         </h5>
+        {width < 640 && (
+          <div className="mb-2 pl-2">
+            <HoveredProject hoveredProject={hoveredProject || ""} />{" "}
+          </div>
+        )}
         <p className="text-sm pl-2 mb-2">{role}</p>
         <p className="text-sm pl-2 pb-4">@ {company}</p>
         <p className="text-sm pl-2 pb-4">{notes}</p>
-        {/* <ul className="pl-6 flex project-tech-ul justify-between pb-2 text-off-white">
-          <li>
-            <p>HTML</p>
-          </li>
-          <li>
-            <p>CSS</p>
-          </li>
-          <li>
-            <p>Javascript</p>
-          </li>
-        </ul> */}
       </li>
     </IconContext.Provider>
   );

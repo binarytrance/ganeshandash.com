@@ -1,54 +1,19 @@
-import { BiLogoGithub } from "react-icons/bi";
-import { BiLogoLinkedinSquare } from "react-icons/bi";
-import { BiMailSend } from "react-icons/bi";
-import { BiSpreadsheet } from "react-icons/bi";
-
-import { IconContext } from "react-icons";
+import SocialIcons from "./SocialIcons";
 
 function Navbar() {
   return (
-    <nav className="navbar flex justify-between items-center mx-[10vw] py-8 ">
+    <nav className="navbar flex justify-center sm:justify-between items-center mx-[5vw] sm:mx-[10vw] py-8 ">
       <div className="navbar__site-links gap-4 flex items-center">
-        <a href="#home" className="w-[40px] h-[40px]">
+        <a href="/" className="w-[40px] h-[40px] hidden sm:flex">
           <img src="/images/logo.png" />{" "}
         </a>
         <a href="#about">About</a>
-        <a href="#contact">Projects</a>
-        <a href="#contact">Skills</a>
-        <a href="#contact">Blog</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
       </div>
-      <div className="navbar__contact-links flex gap-4 items-center">
-        <IconContext.Provider
-          value={{ color: "#e4e4e4", size: "1.5em", className: "social-icons" }}
-        >
-          <a
-            className="w-[20px]"
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/binarytrance/"
-          >
-            <BiLogoGithub />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/ganeshandash/"
-          >
-            <BiLogoLinkedinSquare />
-          </a>
-          <a href="mailto:ganeshan.dash@gmail.com">
-            <BiMailSend />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://drive.google.com/file/d/1hbgrhlEHYbCNwlGsiIpzKSYa2hRZfcJg/view?usp=sharing"
-          >
-            <BiSpreadsheet />
-          </a>
-        </IconContext.Provider>
-      </div>
+      <SocialIcons className="hidden sm:flex" />
     </nav>
   );
 }

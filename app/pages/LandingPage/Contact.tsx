@@ -51,21 +51,24 @@ const Contact = () => {
 
   return (
     <>
-      <Section className="grid grid-cols-[40%_60%] gap-4">
+      <Section
+        id="contact"
+        className="grid grid-cols-1 sm:grid-cols-[40%_60%] gap-4"
+      >
         <div className="flex flex-col justify-center">
-          <h2 className="text-4xl text-gold font-serif">
+          <h2 className="text-2xl sm:text-4xl text-gold font-serif">
             Hey, don't be stranger!
           </h2>
           <p className="py-6">
             Whether it's an idea, an exciting opportunity, a geeky thought, or
             just a quick hello, drop a message — I'm all ears.
           </p>
-          <p>ganeshan.dash@gmail.com</p>
+          <a href="mailto:ganeshan.dash@gmail.com">ganeshan.dash@gmail.com</a>
         </div>
-        <div>
+        <div className="hidden">
           <form
             name="contact"
-            className="border-4 border-dark bg-gold py-8 px-12 rounded-lg shadow-md"
+            className="border-4 border-dark bg-gold py-4 sm:py-8 px-6 sm:px-12 rounded-lg shadow-md"
             // @ts-ignore
             netlify="true"
             onSubmit={handleSubmit}
