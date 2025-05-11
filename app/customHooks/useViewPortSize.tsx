@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 function useViewportSize() {
   const [viewport, setViewport] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: 0,
+    height: 0,
   });
 
   useEffect(() => {
@@ -13,6 +13,8 @@ function useViewportSize() {
         height: window.innerHeight,
       });
     };
+
+    handleResize(); // Set initial size
 
     window.addEventListener("resize", handleResize);
 

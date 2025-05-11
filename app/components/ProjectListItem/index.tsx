@@ -37,11 +37,11 @@ const ProjectListItem = ({
             <FiExternalLink />
           </a>
         </h5>
-        {width < 640 && (
-          <div className="mb-2 pl-2">
-            <HoveredProject hoveredProject={hoveredProject || ""} />{" "}
-          </div>
-        )}
+
+        <div className="mb-2 pl-2 sm:hidden">
+          <HoveredProject hoveredProject={hoveredProject || ""} />{" "}
+        </div>
+
         <p className="text-sm pl-2 mb-2">{role}</p>
         <p className="text-sm pl-2 pb-4">@ {company}</p>
         <p className="text-sm pl-2 pb-4">{notes}</p>
