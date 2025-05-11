@@ -9,11 +9,11 @@ const About = ({}) => {
       <SVG name="hexagon" className="hero-pattern h-100" />
       <Section id={"about"} className="gap-10 align-center border-gold">
         <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-12">
-          <div className="flex justify-center align-center min-w-[200px] h-[200px] border-3 border-gold rounded-full border-dotted">
+          <div className="flex justify-center align-center w-[120px] h-[120px] sm:w-[200px] sm:h-[200px] border-3 border-gold rounded-full border-dotted">
             <img
               src="/images/self-potrait.png"
               alt="Ganeshan Dash"
-              className="rounded-full w-48 h-48 object-cover"
+              className="rounded-full w-[112px] h-[112px] sm:w-[192px] sm:h-[192px] object-cover"
             />
           </div>
           <h1 className="text-gold font-serif text-4xl sm:text-6xl">
