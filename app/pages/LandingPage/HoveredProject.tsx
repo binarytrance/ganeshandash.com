@@ -69,7 +69,7 @@ const HoveredProject = ({
     default:
       return (
         <>
-          <img className="primary-project-img" src="/images/H360_desktop.png" />
+          <img className="primary-project-img" src="/images/h360_desktop.png" />
           <img
             className="secondary-project-img hidden sm:block"
             src="/images/H360_app_mobile.png"
