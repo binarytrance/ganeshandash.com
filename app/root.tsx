@@ -10,6 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import "./styles/app.css";
 import Navbar from "./components/Navbar";
+import { MdxProvider } from "./components/mdx/MdxProvider";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -54,10 +55,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <>
+    <MdxProvider>
       <Navbar />
       <Outlet />
-    </>
+    </MdxProvider>
   );
 }
 
