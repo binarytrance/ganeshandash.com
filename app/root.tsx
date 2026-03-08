@@ -11,6 +11,7 @@ import type { Route } from "./+types/root";
 import "./styles/app.css";
 import Navbar from "./components/Navbar";
 import { MdxProvider } from "./components/mdx/MdxProvider";
+import { HashScroll } from "./components/HashScroll";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -57,6 +58,7 @@ export default function App() {
   return (
     <MdxProvider>
       <Navbar />
+      <HashScroll />
       <Outlet />
     </MdxProvider>
   );
