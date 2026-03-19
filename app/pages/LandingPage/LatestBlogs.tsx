@@ -1,10 +1,10 @@
 import { Link } from 'react-router';
 import { Section } from '~/components/Section';
-import { posts, type Post } from '~/lib/posts';
+import { publishedPosts, type Post } from '~/lib/posts';
 import { BlogCard } from '~/components/blog/BlogCard';
 
 const LatestBlogs = () => {
-    const latestPosts: Post[] = posts.slice(0, 3);
+    const latestPosts: Post[] = publishedPosts.slice(0, 3);
 
     return (
         <Section id='blog'>

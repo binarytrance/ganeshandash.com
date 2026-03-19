@@ -5,10 +5,10 @@ declare module "*.mdx" {
     title: string;
     date: string;
     description?: string;
+    tags?: string[];
     [key: string]: unknown;
   };
 
   const MDXComponent: ComponentType;
   export default MDXComponent;
 }
-

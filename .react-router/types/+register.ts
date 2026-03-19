@@ -9,6 +9,9 @@ declare module "react-router" {
 type Params = {
   "/": {};
   "/blog": {};
+  "/blog/tags/:tag": {
+    "tag": string;
+  };
   "/blog/:slug": {
     "slug": string;
   };
