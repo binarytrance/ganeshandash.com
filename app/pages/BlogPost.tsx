@@ -24,7 +24,17 @@ export default function BlogPost() {
       <article className="prose prose-neutral dark:prose-invert max-w-none">
         <header className="mb-10">
           <h1 className="font-serif">{meta.title}</h1>
-          <div className="mt-2 text-sm text-off-white">{meta.date}</div>
+          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-off-white">
+            <span>
+              Published: <time dateTime={meta.date}>{meta.date}</time>
+            </span>
+            <span>
+              Last updated:{" "}
+              <time dateTime={meta.updated ?? meta.date}>
+                {meta.updated ?? meta.date}
+              </time>
+            </span>
+          </div>
           <BlogTags tags={meta.tags} className="mt-4 flex flex-wrap gap-2" />
           {meta.description ? (
             <p className="mt-4 text-base">{meta.description}</p>

@@ -1,8 +1,9 @@
 export const meta = {
     title: 'How Authentication Works in Modern Web Apps',
     date: '2026-03-08',
+    updated: '2026-03-08',
     description: 'A practical guide on Authentication and Authorization you can bookmark',
-    tags: ['authentication', 'security']
+    tags: ['javascript', 'security']
 };
 
 # Authentication vs Authorization
@@ -43,37 +44,187 @@ flowchart TD
 
 This layer deals with how identity is verified.
 
+Things the user has to know
+
 ### Username and password
 
--   use cases (what kind of apps typically use them)
-    > PIN
+User needs to enter a unique username/email and enter a password they have to remember somehow. (this should link to password managers or advise about using offline notetaking apps)
+Flow:
 
-### Something you have
+```mermaid
+flowchart TD
+  A[User enters username + password] --> B[Server compares password hash with stored hash]
+  B --> C{Valid?}
+  C -- Yes --> D[User is authenticated]
+  C -- No --> E[Authentication failed]
 
-> OTP sent to your phone
+```
 
-> Hardware security key
+#### Key concepts:
+
+-   Password hashing (bcrypt, argon2)
+
+-   Salting
+
+-   Credential storage
+
+#### Pros
+
+-   Simple
+
+-   Widely supported
+
+#### Cons
+
+Weak passwords
+
+Phishing risk
+
+Credential leaks
+
+Need for a password manager for lot of accounts
+
+#### Use cases (what kind of apps typically use them)
+
+#### System design
+
+### PIN (TODO: write more)
+
+Short description:
+Flow:
+Pros
+Cons
+Use Cases
+System design
+
+Something you have
+
+### One-Time Password (OTP)
+
+A temporary code sent to the user.
+
+Flow:
+
+```mermaid
+flowchart TD
+  A[User enters phone/email] --> B[Server generates OTP]
+  B --> C[User enters OTP]
+  C --> D[Server verifies OTP]
+
+```
+
+**Can be down through the following ways:**
+
+-   SMS OTP
+
+-   Email OTP
+
+-   Authenticator apps
+
+**Pros**
+
+-   No password required
+
+-   Good for verification
+
+**Cons**
+
+-   SMS can be intercepted (TODO: how does this work)
+
+-   Delivery delays (TODO: when does this happen)
+
+**System design**
+
+### Hardware security key
 
 > Authentication apps
 
-### Something you are
+Something you are
 
-> Fingerprint
+### Biometric Authentication
 
-> Face recognition
+Uses physical characteristics.
 
-> Retina scan
+Biometrics usually unlock a credential stored on the device rather than directly authenticating with the server.
+
+-   Fingerprint
+
+-   Face recognition
+
+-   Retina scan
+
+**Use Cases**
+
+-   Mobile devices
+
+-   Banking apps
+
+### Multi-Factor Authentication (MFA)
 
 Many systems combine multiple methods, which is known as multi-factor authentication (MFA).
+
+### Social Login / OAuth
+
+Login using another service.
+
+Flow:
+
+```mermaid
+flowchart TD
+  A[User enters phone/email] --> B[Server generates OTP]
+  B --> C[User enters OTP]
+  C --> D[Server verifies OTP]
+```
+
+```mermaid
+flowchart TD
+  A[User clicks Login with Google] --> B[Redirect to Google]
+  B --> C[Google authenticates user]
+  C --> D[Google sends identity token to your app]
+  D --> E[User logged in]
+```
+
+**Examples:**
+
+Google login
+
+GitHub login
+
+Apple login
+
+TODO: what is this OAuth i keep hearing about?
 
 ## Different Authentication systems
 
 This deals with how login state in maintained.
+Because HTTP is stateless.
+
+### Session-Based Authentication
+
+### Token-Based Authentication
+
+## How refresh tokens Work
 
 ## Authorization models
+
+### Role based access control (RBAC)
+
+### Attribute based acces control (ABAC)
+
+### Permission based systems
 
 This deals with how permissions are enforced.
 
 ## Various Saas solutions
 
+## Common web security threats
+
+## Authentication and authorization on mobile
+
 ### How does the server check whether the credentials match what is stored in its database
+
+TODO: where does my physical bitcoin walled stand? and how is its auth implemented?
+
+TODO: add published papers
+
+TODO: Explain SSO

@@ -3,6 +3,7 @@ import type { ComponentType } from "react";
 export type PostMeta = {
   title: string;
   date: string;
+  updated?: string;
   description?: string;
   tags?: string[];
 };
