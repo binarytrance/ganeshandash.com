@@ -171,13 +171,6 @@ Flow:
 
 ```mermaid
 flowchart TD
-  A[User enters phone/email] --> B[Server generates OTP]
-  B --> C[User enters OTP]
-  C --> D[Server verifies OTP]
-```
-
-```mermaid
-flowchart TD
   A[User clicks Login with Google] --> B[Redirect to Google]
   B --> C[Google authenticates user]
   C --> D[Google sends identity token to your app]

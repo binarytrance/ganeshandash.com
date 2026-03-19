@@ -93,7 +93,13 @@ export default defineConfig({
                 launchOptions: { headless: true, timeout: 15000, args: ["--no-sandbox"] },
                 mermaidConfig: {
                     theme: "base",
-                    themeVariables: mermaidThemeVariables
+                    themeVariables: mermaidThemeVariables,
+                    // Use SVG labels so Mermaid's built-in wrapping works reliably.
+                    htmlLabels: false,
+                    flowchart: {
+                        // Wrap node labels to avoid clipping with long text.
+                        wrappingWidth: 160
+                    }
                 },
                 errorFallback: (element: unknown, _diagram: string, error: unknown) => {
                     console.error("[rehype-mermaid] render failed:", error);
