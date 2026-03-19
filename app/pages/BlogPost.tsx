@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import { getPostBySlug } from "~/lib/posts";
+import { BlogTags } from "~/components/blog/BlogTags";
 
 export default function BlogPost() {
   let { slug } = useParams();
@@ -24,6 +25,7 @@ export default function BlogPost() {
         <header className="mb-10">
           <h1 className="font-serif">{meta.title}</h1>
           <div className="mt-2 text-sm text-off-white">{meta.date}</div>
+          <BlogTags tags={meta.tags} className="mt-4 flex flex-wrap gap-2" />
           {meta.description ? (
             <p className="mt-4 text-base">{meta.description}</p>
           ) : null}
