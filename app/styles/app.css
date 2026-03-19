@@ -1,22 +1,6 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Nunito", sans-serif, ui-sans-serif, system-ui,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --color-gold: #efbf04;
-  --color-dark: #060606;
-  --color-dark-2: #2d2d2dd1;
-  --color-emerald: #0a3c30;
-  --color-off-white: #e4e4e4;
-  --color-border-subtle: #ffffff1a;
-  --color-pink: #f26ca7;
-  --z-index-3: 3;
-  --z-index-2: 2;
-  --z-index-1: 1;
-  --z-index-0: 0;
-  --z-index--1: -1;
-  --letter-spacing-08: 0.08rem;
-}
+@import "./generated-theme.css";
 
 html,
 body {
@@ -142,4 +126,18 @@ nav a {
   grid-column: 2; /* second column */
   grid-row: 2; /* second row */
   justify-self: end;
+}
+
+svg.mermaid {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+svg[id^="mermaid-"] {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin: 1.5rem 0;
 }

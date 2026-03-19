@@ -22,3 +22,15 @@
 [ ] button components [p2] [enhancement]
 [ ] interaction animations [1] [enhancement]
 [ ] Newsletter [p3] [feature]
+
+### Mermaid diagrams in MDX
+
+Use Mermaid code fences in `.mdx` files:
+
+```mermaid
+graph TD;
+  A-->B;
+```
+
+Diagrams compile to inline SVG at build time (see `vite.config.ts:1`).
+If your environment doesn’t have Playwright’s Chromium installed, run `npm run playwright:install`.
